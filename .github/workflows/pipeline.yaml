@@ -9,7 +9,7 @@ jobs:
       - name: Clone dos Arquivos do Projeto
         uses: actions/checkout@v4
       
-      -name: Instalar o Python
+      - name: Instalar o Python
         uses: actions/setup-python@v5
         with:
           python-version: '3.13'
