@@ -1,0 +1,13 @@
+name: Pipeline
+on: [push,pull_request]
+
+jobs:
+  testes:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Roda um Comando!
+        run: echo $(pwd)
+      
+      - name: Roda Lista Arquivos
+        run: echo $(ls)
