@@ -21,7 +21,7 @@ jobs:
           echo "Instalando Poetry ..."
           pipx install poetry==1.8.5
           poetry config virtualenvs.in-project true
-          poetry config --list
+          poetry install
 
       - name: Lista Arquivos Diretorio
         run: echo $(ls -a)
