@@ -14,5 +14,8 @@ jobs:
         with:
           python-version: '3.13'
       
+      - name: Instalando poetry
+        run: sudo apt install pipx && pipx ensurepath
+
       - name: Lista Arquivos Diretorio
         run: echo $(ls)
