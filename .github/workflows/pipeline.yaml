@@ -24,4 +24,4 @@ jobs:
           poetry config --list
 
       - name: Lista Arquivos Diretorio
-        run: echo $(ls)
+        run: echo $(ls -a)
