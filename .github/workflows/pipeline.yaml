@@ -22,6 +22,11 @@ jobs:
           pipx install poetry==1.8.5
           poetry config virtualenvs.in-project true
           poetry install
+      
+      - name: Pre Commit
+        run: |
+          source .venv/bin/activate
+          pre-commit run --all-files
 
       - name: Lista Arquivos Diretorio
         run: echo $(ls -a)
