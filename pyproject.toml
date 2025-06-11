@@ -12,6 +12,7 @@ pandas = "^2.2.3"
 pre-commit = "^4.2.0"
 streamlit = "^1.45.1"
 seaborn = "^0.13.2"
+scikit-learn = "^1.7.0"
 
 
 [build-system]

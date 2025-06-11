@@ -1,4 +1,5 @@
 import streamlit as st
+from data.load_test import get_head_dataset, get_variables
 
 
 def show_header():
@@ -22,6 +23,12 @@ def intro():
     )
     st.markdown(
         """
-        ### Se ligue no formato padrão para as entradas com os exemplos abaixo 💡:
+        ### O formato padrão para as entradas estão nos exemplos abaixo 💡:
     """  # noqa: E501
     )
+
+    st.markdown("**OOT** dataframe :")
+    st.dataframe(get_head_dataset())
+
+    st.markdown("**variaveis** json :")
+    st.json(get_variables())
