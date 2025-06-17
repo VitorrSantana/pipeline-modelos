@@ -6,3 +6,4 @@ st.set_page_config(page_title="Model ML", page_icon="🤖")
 
 show_header()
 intro()
+# st.sidebar.success("Selecione uma pagina")
