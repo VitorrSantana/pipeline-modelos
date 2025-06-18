@@ -1,0 +1,32 @@
+name: Pipeline
+on: [push,pull_request]
+
+jobs:
+  testes:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Clone dos Arquivos do Projeto
+        uses: actions/checkout@v4
+      
+      - name: Instalar o Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      
+      - name: Instalando poetry
+        run: |
+          sudo apt install pipx 
+          pipx ensurepath
+          echo "Instalando Poetry ..."
+          pipx install poetry==1.8.5
+          poetry config virtualenvs.in-project true
+          poetry install
+      
+      - name: Pre Commit
+        run: |
+          source .venv/bin/activate
+          pre-commit run --all-files
+
+      - name: Lista Arquivos Diretorio
+        run: echo $(ls -a)

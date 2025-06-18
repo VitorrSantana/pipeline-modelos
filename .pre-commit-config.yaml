@@ -1,0 +1,14 @@
+repos:
+  - repo: https://github.com/psf/black
+    rev: 25.1.0
+    hooks:
+      - id: black
+        files: \.py$
+        args: [--exclude=.venv,.git]
+
+  - repo: https://github.com/PyCQA/flake8
+    rev: 7.1.0
+    hooks:
+    - id: flake8
+      files: \.py$ # Testar apenas arquivos Python
+      args: [--exclude=.venv,.git]  # Excluir pastas que n desejamos testar
